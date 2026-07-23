@@ -1,0 +1,13 @@
+{
+  "name": "pixelpath-bot",
+  "version": "1.0.0",
+  "description": "PixelPath bot for GitHub Codespaces",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.13.0"
+  }
+}
