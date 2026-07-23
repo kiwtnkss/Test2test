@@ -1,5 +1,5 @@
 services:
-  - type: worker
+  - type: web
     name: pixelpath-bot
     env: node
     plan: starter
