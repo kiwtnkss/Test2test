@@ -98,3 +98,15 @@ server.listen(port, () => {
 });
 
 startCloudBot();
+const https = require('https');
+
+// สั่งให้สคริปต์ยิงปิงเรียก URL ตัวเองทุกๆ 10 นาที (600,000 ms)
+const RENDER_URL = 'https://test2test-xkjg.onrender.com/';
+
+setInterval(() => {
+    https.get(RENDER_URL, (res) => {
+        console.log(`⏰ [Self-Ping] สะกิดเว็บ Render สำเร็จ (Status: ${res.statusCode}) - ทำงาน 24/7 ไม่หลับ`);
+    }).on('error', (err) => {
+        console.error("❌ [Self-Ping Error]:", err.message);
+    });
+}, 600000); // 600,000 ms = 10 นาที
