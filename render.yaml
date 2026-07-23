@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: pixelpath-bot
+    env: node
+    plan: starter
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars: []
